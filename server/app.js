@@ -72,6 +72,14 @@ app.put('/cards/:id',function(req, res, next){
             })
 })
 
+app.delete('/delete/:id',function(req, res, next){
+    FlashCardModel.remove({_id:req.params.id})
+        .then(function(data){
+            res.send(data)
+        })
+
+})
+
 app.get('/*',function(req, res, next){
 
     res.sendFile(indexHtmlPath);

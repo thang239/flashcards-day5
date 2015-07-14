@@ -25,13 +25,13 @@ app.controller('editCard',function(FlashCardFactory,$scope,$http,$stateParams){
         })
   	}
 
-  	// $scope.deleteCard = function(){
-  	// 	$http.delete('/delete/'+$scope.editCard._id,editCard)
-  	// 		.success(function(){
-  	// 			window.location.href = "/"
-  	// 		})
-  	// }
-  	// $scope.redirect = function(){
-  	// 	window.location.href = "/";
-  	// }
+  	$scope.deleteCard = function(){
+  		$http.delete('/delete/'+$scope.editCard._id)
+  			.success(function(){
+  				window.location.href = "/"
+  			})
+  	}
+  	$scope.redirect = function(){
+  		window.location.href = "/";
+  	}
 })
