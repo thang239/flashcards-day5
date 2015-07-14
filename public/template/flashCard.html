@@ -8,10 +8,11 @@
 
 <div ng-repeat="theCard in flashCards" ng-controller="FlashCardCtrl">
   <div class="flash-card"   border-on-hover>
-    <button ui-sref="manageCardView({id:theCard._id})">Edit Card</button>
+    <button ui-sref="manageCardView.editView({id:theCard._id})">Edit Card</button>
+    <button ui-sref="manageCardView.deleteView({id:theCard._id})">Delete Card</button>
       <!-- <ui-view></ui-view> -->
       <h1>
-        {{ theCard.question}}
+        {{theCard.question}}
       </h1>
 
       <h2
