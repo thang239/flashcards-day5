@@ -24,6 +24,12 @@ app.factory('FlashCardFactory', function($http) {
       'Express',
       'Angular',
       'Node'
-    ]
+    ],
+    getOneCard : function (id){
+      return $http.get('/cards/'+id)
+      .then(function (card){
+        return card.data;
+      })
+    }
   }
 })

@@ -58,12 +58,27 @@ app.get('/cards', function (req, res, next) {
 
 });
 
+app.get('/cards/:id', function (req, res, next){
+    FlashCardModel.findOne({_id: req.params.id})
+    .then(function (card){
+        res.send(card);
+    })
+})
+
+app.put('/cards/:id',function(req, res, next){
+    FlashCardModel.update({_id:req.params.id},req.body)
+            .then(function(data){
+                res.send(data);
+            })
+})
 
 app.get('/*',function(req, res, next){
 
     res.sendFile(indexHtmlPath);
 
 })
+
+
 
 
 

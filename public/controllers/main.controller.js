@@ -1,10 +1,10 @@
-app.controller('MainCtrl', function($scope, FlashCardFactory) {
+app.controller('MainCtrl', function($scope, FlashCardFactory,$state) {
   // make a query
   $scope.hide = true;
   FlashCardFactory.getFlashCards()
     .then(function(cards) {
       $scope.flashCards = cards;
-      console.log($scope.flashCards);
+      // console.log($scope.flashCards);
     })
     .catch(function(e) {
       console.log('e', e);
@@ -28,4 +28,5 @@ app.controller('MainCtrl', function($scope, FlashCardFactory) {
       $scope.flashCards.push(card);
     }
   });
+  // $state.transitionTo('flashCardView.manageCardView')
 })

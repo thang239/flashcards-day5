@@ -20,6 +20,24 @@ app.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
       controller: 'StatsController',
       templateUrl: '/template/statistics.html'
     })
+    .state('manageCardView',{
+    	url:'/edit/:id',
+    	controller:'editCard',
+    	templateUrl:'/template/editCard.html'
+    })
+    .state('manageCardView.editView', {
+    	url:'/edit/:id',
+    	templateUrl: '/template/editCard.html'
+    })
+    .state('manageCardView.deleteView', {
+    	url:'/delete/:id',
+    	templateUrl: '/template/deleteCard.html'
+    })
+    // .state('flashCardView.manageCardView',{
+    // 	url:'edit/:id',
+    // 	controller:'editCard',
+    // 	templateUrl:'/template/editCard.html'
+    // })
 
 
 })
