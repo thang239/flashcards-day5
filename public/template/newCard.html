@@ -6,6 +6,7 @@
   <h3>category</h3>
   <p>
     <select ng-model="newCard.category" required>
+      {{categories}}
       <option ng-repeat="category in categories">{{ category }}</option>
     </select>
   </p>

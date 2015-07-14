@@ -10,12 +10,7 @@ app.controller('MainCtrl', function($scope, FlashCardFactory) {
       console.log('e', e);
     })
   // console.log('123')
-  $scope.categories = [
-    'MongoDB',
-    'Express',
-    'Angular',
-    'Node'
-  ];
+  $scope.categories = FlashCardFactory.categories;
 
   $scope.activeCat = null;
 
