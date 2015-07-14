@@ -1,5 +1,5 @@
-
-<div ng-repeat="theCard in flashCards">
+<loader ng-hide="flashCards"></loader>
+<div ng-repeat="theCard in flashCards" ng-controller="FlashCardCtrl">
   <div class="flash-card"   border-on-hover>
       <h1>
         {{ theCard.question}}
