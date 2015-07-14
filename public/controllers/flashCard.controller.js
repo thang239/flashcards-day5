@@ -2,6 +2,7 @@ app.controller('FlashCardCtrl', function ($scope, ScoreFactory) {
     $scope.answered = false;
     $scope.answeredCorrectly = null;
 
+    console.log('Hello')
     $scope.answerQuestion = function(answer) {
       if($scope.answered) {
         return;

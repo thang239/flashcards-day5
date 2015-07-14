@@ -27,6 +27,8 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 
 // If we're hitting our home page, serve up our index.html file!
+
+
 app.get('/', function (req, res) {
     res.sendFile(indexHtmlPath);
 });
@@ -55,3 +57,14 @@ app.get('/cards', function (req, res, next) {
     });
 
 });
+
+
+app.get('/*',function(req, res, next){
+
+    res.sendFile(indexHtmlPath);
+
+})
+
+
+
+

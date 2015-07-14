@@ -3,11 +3,12 @@ app.controller('MainCtrl', function ($scope, FlashCardFactory) {
     FlashCardFactory.getFlashCards()
     .then(function (cards) {
       $scope.flashCards = cards;
+      // console.log($scope.flashCards);
     })
     .catch(function (e) {
       console.log('e', e);
     })
-
+    // console.log('123')
     $scope.categories = [
         'MongoDB',
         'Express',
